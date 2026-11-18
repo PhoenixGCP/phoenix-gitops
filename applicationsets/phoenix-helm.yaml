@@ -21,7 +21,7 @@ spec:
     spec:
       project: phoenix
       source:
-        repoURL: https://github.com/phoenix-skies/phoenix-gitops.git
+        repoURL: https://github.com/PhoenixGCP/phoenix-gitops.git
         targetRevision: main
         path: helm/phoenix
         helm:

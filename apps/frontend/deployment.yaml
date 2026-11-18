@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/phoenix-skies/phoenix-frontend:latest
+          image: ghcr.io/phoenixgcp/phoenix-frontend:latest
           ports: [{ name: http, containerPort: 8080 }]
           env:
             - { name: API_UPSTREAM, value: "phoenix-backend:8080" }

@@ -6,9 +6,9 @@ resources:
   - ../base
   - namespace.yaml
 images:
-  - name: ghcr.io/phoenix-skies/phoenix-backend
+  - name: ghcr.io/phoenixgcp/phoenix-backend
     newTag: sha-9c40182
-  - name: ghcr.io/phoenix-skies/phoenix-frontend
+  - name: ghcr.io/phoenixgcp/phoenix-frontend
     newTag: sha-9c40182
 replicas:
   - name: phoenix-backend

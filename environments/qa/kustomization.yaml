@@ -6,9 +6,9 @@ resources:
   - ../base
   - namespace.yaml
 images:
-  - name: ghcr.io/phoenix-skies/phoenix-backend
+  - name: ghcr.io/phoenixgcp/phoenix-backend
     newTag: latest
-  - name: ghcr.io/phoenix-skies/phoenix-frontend
+  - name: ghcr.io/phoenixgcp/phoenix-frontend
     newTag: latest
 replicas:
   - name: phoenix-backend

@@ -1,6 +1,6 @@
 # Defaults shared by all environments. Per-env overrides live in values-<env>.yaml.
 environment: dev
-imageRegistry: ghcr.io/phoenix-skies
+imageRegistry: ghcr.io/phoenixgcp
 frontend:
   replicas: 1
   image: {repository: phoenix-frontend, tag: latest, pullPolicy: IfNotPresent}

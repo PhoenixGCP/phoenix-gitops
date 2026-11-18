@@ -8,7 +8,7 @@ metadata:
 spec:
   description: Project Phoenix — e-commerce platform for Phoenix Electronics
   sourceRepos:
-    - https://github.com/phoenix-skies/phoenix-gitops.git
+    - repoURL: https://github.com/PhoenixGCP/phoenix-gitops.git
   destinations:
     - { server: https://kubernetes.default.svc, namespace: "phoenix-*" }
     - { server: https://kubernetes.default.svc, namespace: monitoring }

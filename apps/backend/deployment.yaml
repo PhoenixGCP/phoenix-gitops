@@ -14,7 +14,7 @@ spec:
       securityContext: { runAsNonRoot: true, runAsUser: 10001 }
       containers:
         - name: api
-          image: ghcr.io/phoenix-skies/phoenix-backend:latest
+          image: ghcr.io/phoenixgcp/phoenix-backend:latest
           ports: [{ name: http, containerPort: 8080 }]
           envFrom:
             - configMapRef: { name: phoenix-backend-config }
