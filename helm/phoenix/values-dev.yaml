@@ -2,8 +2,8 @@
 environment: dev
 frontend:
   replicas: 5
-  image: {tag: 'sha-9c40182@sha256:50600e1e25506f332c50f03aa1c9c9c4f2797b5e99299fb6eaebc95e761ee714'}
+  image: {tag: 'sha-0ac82bc@sha256:84ceb894683c20f58b0761b4eb359611c1ede03a060c75b003ef4d2abdb962f1'}
 backend:
   replicas: 5
   errorRate: "0"
-  image: {tag: 'sha-9c40182@sha256:31552e32cb899cd46512c6b782338b646223e03c13444226f1ee8e74e9520b21'}
+  image: {tag: 'sha-0ac82bc@sha256:1158ea56dc5596abc0b8902e9985cf39e14e515c6a369dfac9e3374b57165b72'}
