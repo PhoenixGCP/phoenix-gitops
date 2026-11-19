@@ -26,7 +26,7 @@ jobs:
           kubeconform -strict -summary -ignore-missing-schemas \
             -schema-location default \
             -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' \
-            out/*.yaml argocd/ applicationsets/ monitoring/
+            out/*.yaml argocd/project.yaml argocd/root-app.yaml applicationsets/ monitoring/
       - name: Prod must use immutable image references
         run: |
           if grep -E 'tag: *(latest|"latest")' helm/phoenix/values-prod.yaml; then
