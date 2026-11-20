@@ -28,7 +28,7 @@ spec:
           releaseName: phoenix
           valueFiles: [values.yaml, "values-{{.env}}.yaml"]
       destination:
-        server: https://kubernetes.default.svc
+        server: https://34.14.154.222
         namespace: "phoenix-{{.env}}"
       syncPolicy:
         syncOptions: [CreateNamespace=true]

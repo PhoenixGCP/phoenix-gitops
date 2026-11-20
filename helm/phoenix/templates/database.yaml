@@ -1,3 +1,4 @@
+{{- if not .Values.database.externalSecret }}
 {{- if .Values.database.sealedPassword }}
 # Day 8 — encrypted with the cluster's Sealed Secrets key; safe to commit.
 apiVersion: bitnami.com/v1alpha1
@@ -21,6 +22,7 @@ metadata:
 type: Opaque
 stringData:
   password: {{ .Values.database.devPassword | quote }}
+{{- end }}
 {{- end }}
 ---
 apiVersion: apps/v1
