@@ -27,6 +27,8 @@ spec:
       labels: {{- include "phoenix.labels" . | nindent 8 }}
         app.kubernetes.io/name: phoenix-backend
     spec:
+      imagePullSecrets:
+        - name: ghcr-pull-secret
       securityContext: { runAsNonRoot: true, runAsUser: 10001 }
       containers:
         - name: api
