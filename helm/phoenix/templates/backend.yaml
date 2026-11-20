@@ -19,6 +19,13 @@ metadata:
     app.kubernetes.io/name: phoenix-backend
 spec:
   replicas: {{ .Values.backend.replicas }}
+  {{- if not .Values.backend.rollout.enabled }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+  {{- end }}
   revisionHistoryLimit: 5
   selector:
     matchLabels: { app.kubernetes.io/name: phoenix-backend }
