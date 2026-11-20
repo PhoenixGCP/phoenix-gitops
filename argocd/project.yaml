@@ -12,6 +12,8 @@ spec:
   destinations:
     - { server: https://kubernetes.default.svc, namespace: "phoenix-*" }
     - { server: https://kubernetes.default.svc, namespace: monitoring }
+    - { server: https://34.14.154.222, namespace: "phoenix-*" }
+    - { server: https://34.14.154.222, namespace: monitoring }
   clusterResourceWhitelist:
     - { group: "", kind: Namespace }
   namespaceResourceBlacklist:
