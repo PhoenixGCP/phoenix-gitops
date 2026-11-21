@@ -3,13 +3,13 @@ environment: dev
 frontend:
   service: {type: ClusterIP, port: 80}
   replicas: 1
-  image: {tag: 'sha-25b3bc1@sha256:89e1e50cf7b38a77fbc52b9a1d32f9d71a421076bc095c6d0423feeeab829320'}
+  image: {tag: 'sha-80b839b@sha256:cf623fb5617875c65d2a32553f3163b4609b2b8213ee04eb2f97d2b89423cc0f'}
 backend:
   rollout:
     enabled: false
   replicas: 1
   errorRate: "0"
-  image: {tag: 'sha-25b3bc1@sha256:4e8e391678de850b7406c5939f5b63c7c0007335394c54f260f56bd6b984fac2'}
+  image: {tag: 'sha-80b839b@sha256:b81c99406bec512b55b91640a9a0f526ada50c3b36804bb0cbd3ec59616167a7'}
 database:
   externalSecret: true
 loadgen:
