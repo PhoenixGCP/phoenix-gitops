@@ -7,9 +7,9 @@ resources:
   - namespace.yaml
 images:
   - name: ghcr.io/phoenixgcp/phoenix-backend
-    newTag: sha-25b3bc11dcda148d4fae71d82e94c8e239eb8164
+    newTag: sha-80b839b
   - name: ghcr.io/phoenixgcp/phoenix-frontend
-    newTag: sha-25b3bc11dcda148d4fae71d82e94c8e239eb8164
+    newTag: sha-80b839b
 replicas:
   - name: phoenix-backend
     count: 1
