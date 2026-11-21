@@ -50,10 +50,16 @@ spec:
               value: {{ .Values.backend.errorRate | quote }}
             - name: APP_VERSION
               value: {{ .Values.backend.image.tag | toString | splitList "@" | first | quote }}
+            - name: DB_HOST
+              value: phoenix-db
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              value: phoenix
+            - name: DB_USER
+              value: phoenix
             - name: DB_PASSWORD
               valueFrom: { secretKeyRef: { name: phoenix-db, key: password } }
-            - name: DATABASE_URL
-              value: postgresql://phoenix:$(DB_PASSWORD)@phoenix-db:5432/phoenix
           readinessProbe: { httpGet: { path: /readyz, port: http }, periodSeconds: 5 }
           livenessProbe: { httpGet: { path: /healthz, port: http }, periodSeconds: 10 }
           resources: {{- toYaml .Values.backend.resources | nindent 12 }}
