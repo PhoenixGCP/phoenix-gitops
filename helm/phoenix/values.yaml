@@ -3,14 +3,14 @@ environment: dev
 imageRegistry: ghcr.io/phoenixgcp
 frontend:
   replicas: 1
-  image: {repository: phoenix-frontend, tag: sha-25b3bc11dcda148d4fae71d82e94c8e239eb8164, pullPolicy: IfNotPresent}
+  image: {repository: phoenix-frontend, tag: sha-80b839b7bded1ebfa8763946fd882dbcc668f690, pullPolicy: IfNotPresent}
   service: {type: LoadBalancer, port: 80}
   resources:
     requests: {cpu: 20m, memory: 32Mi}
     limits: {cpu: 200m, memory: 128Mi}
 backend:
   replicas: 1
-  image: {repository: phoenix-backend, tag: sha-25b3bc11dcda148d4fae71d82e94c8e239eb8164, pullPolicy: IfNotPresent}
+  image: {repository: phoenix-backend, tag: sha-80b839b7bded1ebfa8763946fd882dbcc668f690, pullPolicy: IfNotPresent}
   errorRate: "0" # set to e.g. "0.5" to simulate a bad release (canary demo)
   resources:
     requests: {cpu: 50m, memory: 96Mi}
